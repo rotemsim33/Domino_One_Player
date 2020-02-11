@@ -1,0 +1,631 @@
+li{
+    list-style-type: none;
+}
+
+
+.row0, .row1, .row2, .row3, .row4, .row5, .row6, .row7, .row8 {
+    padding: 6px;
+    width: 95px;
+    height: 95px;
+}
+
+ul {
+    padding-left: 0;
+}
+
+.row{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+.grid {
+    display: flex;
+    flex-direction: column;
+}
+
+.board{
+    background-image: url("board.png");
+    position: relative;
+    margin-top: 20px;
+    margin-left: 51px;
+    border: 4px solid;
+    display:block;
+    width: 961px;
+    height: 762px;
+    background-repeat: round;
+    filter: brightness(89%);
+}
+
+.verticalSide1{
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+}
+
+.verticalSide2{
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.verticalSide1, .verticalSide2 {
+    height: 46%;
+    border:2px solid #D0CECE;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: white;
+}
+
+.vertical{
+    height: 95px;
+    width: 45px;
+    border: 2px solid #3E606F;
+    display: inline-block;
+    border-radius: 5px;
+    margin-right: 2px;
+    margin-left: 2px;
+}
+
+
+li > .vertical{
+    height: 95px;
+    width: 45px;
+    border: 2px solid #3E606F;
+    display: inline-block;
+    border-radius: 5px;
+    margin-right: 2px;
+    margin-left: 25px;
+}
+
+.horizontalSide2 {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.horizontalSide1 {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+.horizontalSide1, .horizontalSide2 {
+    display: block;
+    width: 46%;
+    border:2px solid #D0CECE;
+    float: right;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: white;
+}
+
+.horizontal {
+    width: 95px;
+    height: 45px;
+    border: 2px solid #3E606F;
+    display:inline-flex;
+    margin-top: 27px;
+}
+
+.undefined{
+    width: 95px;
+    height: 95px;
+    display: inline-flex;
+}
+
+.nonePacket{
+    display: none;
+}
+
+
+.under:hover {
+
+    cursor: pointer;
+}
+
+ .under {
+     color: #fff;
+     background-color: #3E606F;
+     border-radius: 6px;
+     box-shadow: 0 5px #999;
+     transition: 0.1s;
+     font-family: sans-serif;
+     padding: 2px 8px;
+     padding-top: 5px;
+     text-align: center;
+     font-weight: bold;
+     background-size: contain;
+     margin-top: 2px;
+     margin-left: 2px;
+     height: 52px;
+     width: 116px;
+     display: inline-block;
+     border: 2px solid #D0CECE;
+     font-size: 120%;
+ }
+
+ .empty{
+     cursor: pointer;
+     background-color: #3E606F;
+     width: 95px;
+     height: 45px;
+     display: flex;
+     flex-direction: row;
+     margin-top:25px;
+     border-radius: 5px;
+     border: 2px solid #D0CECE;
+ }
+
+.canChoose:hover{
+    cursor: pointer;
+    background-color: blue;
+
+}
+
+.canChoose{
+    box-shadow: 1px -5px 3px 3px #40463fd4;
+}
+
+.win, .lose{
+    font-size: 57px;
+    width: 48%;
+    text-align: center;
+    position: relative;
+    font-weight: bold;
+    color: white;
+}
+
+
+.close:hover{
+    cursor: pointer;
+    font-weight: bold;
+
+}
+
+.clock:hover{
+    cursor:default;
+
+}
+
+.close {
+
+    color: red;
+    position: unset;
+    /* top: 0px; */
+    font-size: 23px;
+    right: 4px;
+    padding-top:5px;
+}
+
+
+.statistics:hover{
+    cursor:default;
+}
+
+.statistics{
+    position: relative;
+    margin-top: -495px;
+    margin-left: 892px;
+    /*border: 2px solid;*/
+    display: inherit;
+    width: 354px;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 157%;
+    left: 290px;
+    padding: 12px;
+    box-shadow: -3px -5px 4px 5px #35322ee3;
+}
+
+.statistics>span {
+padding-top: 7px;
+}
+
+.titleStatistics{
+    text-decoration: underline;
+}
+
+
+button {
+    text-align: center;
+    margin: 10px;
+    width: 170px;
+    font-family: sans-serif;
+    font-weight: bold;
+    display: inline-block;
+    padding: 2px 8px;
+    color: #fff;
+    background-color: #3E606F;
+    border-radius: 6px;
+    box-shadow: 0 5px #999;
+    transition: 0.1s;
+    border:2px solid #D0CECE;
+    font-size: 170%;
+
+}
+
+.endGameModal {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: -24px;
+    left: -63px;
+    background-color: rgba(0,0,0,0.76);
+    justify-content: center;
+    align-items: center;
+}
+
+.statistics > span{
+    display: block;
+}
+
+.buttonContainer{
+    display: flex;
+    margin-top: 13px;
+    margin-right: -627px;
+    float: right;
+}
+
+.undoButton:hover {
+    cursor: pointer;
+}
+
+.undoButton{
+    margin-top: 21px;
+    margin-right: -426px;
+    float: right;
+}
+
+
+button:active{
+    background-color: #3e8e41;
+    box-shadow: 0 3px #666;
+    transform: translateY(2px);
+}
+
+.verticalEmptyPlace{
+    cursor: pointer;
+    background-color: #3E606F;
+    height: 95px;
+    width: 45px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 25px;
+    border-radius: 5px;
+    border: 2px solid #D0CECE;
+}
+
+body{
+    background-image: url("BackGround.png");
+    background-repeat:repeat-x;
+    filter: grayscale(16%);
+    background-size:cover;
+    background-attachment: fixed;
+    overflow: hidden;
+}
+
+.containerPlayerCards{
+    margin-top: 1.3%;
+    margin-left: 358px;
+    position: absolute;
+
+}
+
+.allPacket{
+    float: left;
+    margin-top: -2px;
+    margin-left: 2%;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.clock{
+
+    margin-top: 33px;
+    font-size: 25px;
+    font-weight: bold;
+    margin-left: 1287px;
+    display: inline-block;
+    font-family: sans-serif;
+    height: 60%;
+    width: 145px;
+    border: solid;
+    position: relative;
+
+    text-align: center;
+    padding: 5px;
+}
+
+.blockTakeCard{
+    cursor:not-allowed;
+}
+
+
+
+@media screen and (max-width: 1600px) {
+
+    .board {
+        width: 900px;
+        height: 700px;
+        margin-top: 40px;
+        margin-left: 40px;
+    }
+
+    .containerPlayerCards {
+        margin-left: 25%;
+        margin-top: 80px;
+
+    }
+
+    .undefined {
+        width: 80px;
+        height: 80px;
+    }
+
+    .horizontal {
+        width: 80px;
+        height: 37px;
+    }
+
+    .allPacket {
+        margin-top: 110px;
+
+    }
+
+    .statistics {
+        font-size: 122%;
+        margin-left: 740px;
+        width: 264px;
+    }
+
+    .vertical {
+        width: 37px;
+        height: 80px;
+    }
+
+    li > .vertical {
+        width: 37px;
+        height: 80px;
+    }
+
+    .empty {
+        width: 80px;
+        height: 37px;
+
+    }
+
+    .verticalEmptyPlace {
+        width: 38px;
+        height: 80px;
+    }
+
+    .row0, .row1, .row2, .row3, .row4, .row5, .row6, .row7, .row8 {
+        height: 87px;
+        margin: -3px;
+    }
+
+    .under {
+        height: 35px;
+        width: 85px;
+        font-size: 106%;
+    }
+
+    .clock {
+
+        width: 124px;
+        font-size: 20px;
+        margin-left: 1107px;
+        padding: 3px;
+
+    }
+    .undoButton {
+        margin-top: 125px;
+        margin-right: -297px;
+        font-size: 138%;
+        width: 158px
+    }
+
+    .buttonContainer{
+        display: flex;
+
+        font-size: 14px;
+        margin-top: 111px;
+        margin-right: -420px;
+    }
+    .endGameModal {
+        top: -13px;
+        left: -51px;
+    }
+
+    button{
+        width: 141px;
+    }
+}
+
+
+
+
+
+
+@media screen and (max-width: 1280px) {
+
+
+    .allPacket {
+        margin-top: 110px;
+    }
+
+
+    .undoButton {
+        margin-right: -217px;
+        font-size: 120%;
+    }
+
+
+    .board {
+        width: 766px;
+        height: 710px;
+        margin-top: 15px;
+        margin-left: 9px;
+    }
+
+    .containerPlayerCards {
+        margin-left: 25%;
+        margin-top: 80px;
+    }
+
+    .undefined {
+        width: 72px;
+        height: 72px;
+    }
+
+    .horizontal {
+        width: 78px;
+        height: 35px;
+    }
+
+    .statistics {
+        font-size: 94%;
+        margin-left: 506px;
+        width: 227px;
+
+    }
+
+    .vertical {
+        width: 38px;
+        height: 75px;
+    }
+
+    li > .vertical {
+        width: 35px;
+        height: 72px;
+    }
+    .empty {
+        width: 78px;
+        height: 35px;
+        margin-top: 26px;
+    }
+
+    .verticalEmptyPlace {
+        width: 38px;
+        height: 75px;
+    }
+
+    .row0, .row1, .row2, .row3, .row4, .row5, .row6, .row7, .row8 {
+        height: 87px;
+        margin: -3px;
+    }
+
+    .under {
+        height: 35px;
+        width: 85px;
+        font-size: 106%;
+    }
+
+    .clock {
+        width: 95px;
+        font-size: 17px;
+        margin-left: 871px;
+        padding: 3px;
+    }
+
+    .buttonContainer{
+        font-size: 13px;
+            margin-top: 63px;
+            margin-right: -225px;
+        display: grid;
+    }
+
+    button{
+        width: 141px;
+    }
+
+    .endGameModal{
+        top: -13px;
+        left: -21px;
+       
+    }
+}
+
+
+@media screen and (max-height: 905px) {
+
+
+    .allPacket {
+        margin-top: -2px;
+    }
+
+    .buttonContainer{
+        margin-top: -90px;
+        display: grid;
+        margin-right: -202px;
+
+    }
+
+    .containerPlayerCards {
+        margin-top: 8px;
+    }
+
+    .board {
+        width: 766px;
+        height: 657px;
+        margin-top: 10px;
+        margin-left: 10px;
+    }
+
+    .undefined {
+        width: 72px;
+        height: 72px;
+    }
+
+    .horizontal {
+        width: 72px;
+        height: 35px;
+    }
+
+
+  .statistics {
+      font-size: 94%;
+      margin-left: 506px;
+      width: 227px;
+  }                       
+
+    .vertical {
+        width: 38px;
+        height: 75px;
+    }
+
+    li > .vertical {
+        width: 35px;
+        height: 72px;
+    }
+    .empty {
+        width: 78px;
+        height: 35px;
+    }
+
+    .verticalEmptyPlace {
+        width: 36px;
+        height: 74px;
+    }
+
+    .row0, .row1, .row2, .row3, .row4, .row5, .row6, .row7, .row8 {
+        height: 87px;
+        margin: -3px;
+    }
+
+    .under {
+        height: 35px;
+        width: 85px;
+        font-size: 106%;
+    }
+     .clock {
+             width: 98px;
+             font-size: 17px;
+             margin-left: 901px;
+             padding: 3px;
+     }
+    .undoButton {
+        margin-top: 8px;
+        margin-right: -202px;
+    }
+}
